@@ -18,7 +18,7 @@
       role: 'Marketing Coordinator \u2192 Product Manager',
       responsibilities: 'Managed product portfolio, budget, and launches; led B2B e-commerce relaunch; coordinated cross-functional teams.',
       competencies: 'Product strategy, budget management, cross-functional leadership.',
-      results: '79 SKUs managed, 50% average profit margin, ~$110K CAD annual marketing budget.'
+      results: '79 SKUs managed, 50% average profit margin over landed product cost; launch of Service Sales (Extended Warranties and Maintenance Services).'
     },
     {
       title: 'Entrepreneurship',
@@ -32,7 +32,7 @@
       title: 'Customer Experience & Property Management',
       company: 'CAPREIT',
       role: 'Property Specialist',
-      responsibilities: 'Managed leasing across 18 buildings; tenant screening, inspections, vendor coordination.',
+      responsibilities: 'Managed leasing across 18 buildings (approx. 2,700 suites); tenant screening, inspections, vendor coordination.',
       competencies: 'Customer service, compliance, organization, conflict resolution.',
       results: 'Accurate leasing documentation and vacancy reporting across a large residential portfolio.'
     },
@@ -42,7 +42,7 @@
       role: 'Digital Marketing Consultant / Content Creator',
       responsibilities: 'Managed paid and organic campaigns; produced video and content; tracked and optimized performance.',
       competencies: 'Paid media, content strategy, analytics, on-camera presence.',
-      results: 'Conversion rate 0.20% \u2192 3.69%; 69% lower cost per conversion.'
+      results: 'Conv. Rate 14\u00d7 higher, consistent posting schedule, content creation.'
     }
   ];
 
