@@ -601,3 +601,36 @@ main, header, footer {
   .timeline-item { border-bottom: none; border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 1rem; font-size: 0.85rem; }
   .timeline-item .timeline-company { display: none; }
 }
+
+/* Results screenshots inside case studies */
+.case-section > div { min-width: 0; }
+
+.result-shots {
+  display: grid;
+  gap: 2.25rem;
+  margin-top: 2.5rem;
+}
+
+.result-shot { margin: 0; }
+
+.result-shot a {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--paper-raised);
+  cursor: zoom-in;
+}
+
+.result-shot img {
+  width: 100%;
+  height: auto;
+}
+
+.result-shot figcaption {
+  max-width: 62ch;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: rgba(27, 36, 64, 0.75);
+}
