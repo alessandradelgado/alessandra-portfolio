@@ -3,7 +3,7 @@
 // to keep it simple and instant rather than animated.
 
 (function () {
-  const categories = [
+  const defaultCategories = [
     {
       title: 'Corporate Sales & Account Management',
       company: 'Daewoo, Iberia',
@@ -46,6 +46,13 @@
     }
   ];
 
+  const categories = window.timelineCategories || defaultCategories;
+  const labels = window.timelineLabels || {
+    responsibilities: 'Key responsibilities',
+    competencies: 'Related competencies',
+    results: 'Results'
+  };
+
   const list = document.getElementById('timelineList');
   const detail = document.getElementById('timelineDetail');
   if (!list || !detail) return;
@@ -57,9 +64,9 @@
     detail.setAttribute('aria-labelledby', 'timelineTab' + activeIndex);
     detail.innerHTML =
       '<div class="timeline-detail-role">' + item.role + '</div>' +
-      '<dt>Key responsibilities</dt><dd>' + item.responsibilities + '</dd>' +
-      '<dt>Related competencies</dt><dd>' + item.competencies + '</dd>' +
-      '<dt>Results</dt><dd>' + item.results + '</dd>';
+      '<dt>' + labels.responsibilities + '</dt><dd>' + item.responsibilities + '</dd>' +
+      '<dt>' + labels.competencies + '</dt><dd>' + item.competencies + '</dd>' +
+      '<dt>' + labels.results + '</dt><dd>' + item.results + '</dd>';
   }
 
   function renderList(activeIndex) {
