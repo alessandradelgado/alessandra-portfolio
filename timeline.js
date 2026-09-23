@@ -50,7 +50,11 @@
   const detail = document.getElementById('timelineDetail');
   if (!list || !detail) return;
 
-  function renderDetail(item) {
+  detail.setAttribute('role', 'tabpanel');
+  detail.setAttribute('tabindex', '0');
+
+  function renderDetail(item, activeIndex) {
+    detail.setAttribute('aria-labelledby', 'timelineTab' + activeIndex);
     detail.innerHTML =
       '<div class="timeline-detail-role">' + item.role + '</div>' +
       '<dt>Key responsibilities</dt><dd>' + item.responsibilities + '</dd>' +
@@ -62,18 +66,20 @@
     list.innerHTML = '';
     categories.forEach((item, i) => {
       const btn = document.createElement('button');
+      btn.id = 'timelineTab' + i;
       btn.className = 'timeline-item' + (i === activeIndex ? ' is-active' : '');
       btn.setAttribute('role', 'tab');
       btn.setAttribute('aria-selected', i === activeIndex ? 'true' : 'false');
+      btn.setAttribute('aria-controls', 'timelineDetail');
       btn.innerHTML = item.title + '<span class="timeline-company">' + item.company + '</span>';
       btn.addEventListener('click', () => {
         renderList(i);
-        renderDetail(categories[i]);
+        renderDetail(categories[i], i);
       });
       list.appendChild(btn);
     });
   }
 
   renderList(0);
-  renderDetail(categories[0]);
+  renderDetail(categories[0], 0);
 })();
