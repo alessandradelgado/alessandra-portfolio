@@ -592,6 +592,53 @@ main, header, footer {
   .tools-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- Career history (compact supplementary roles) ---------- */
+.career-section { border-top: 1px solid var(--line); padding-top: 3rem; }
+
+.career-intro {
+  max-width: 62ch;
+  color: rgba(27, 36, 64, 0.75);
+  margin: 0.5rem 0 2rem;
+}
+
+.career-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.career-row {
+  display: grid;
+  grid-template-columns: 11rem 16rem 1fr;
+  gap: 1rem 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.career-row:last-child { border-bottom: none; padding-bottom: 0; }
+
+.career-date {
+  font-size: 0.85rem;
+  color: var(--sage);
+  white-space: nowrap;
+}
+
+.career-role { font-weight: 500; }
+
+.career-company {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(27, 36, 64, 0.6);
+  font-weight: 400;
+}
+
+@media (max-width: 860px) {
+  .career-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+}
+
 .timeline-section {
   padding: 4rem 0 5rem;
   border-top: 1px solid var(--line);
