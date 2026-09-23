@@ -8,7 +8,8 @@
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) return;
 
-  const words = ['Strategy.', 'Creative.', 'Digital.', 'Growth.'];
+  const defaultWords = ['Strategy.', 'Creative.', 'Digital.', 'Growth.'];
+  const words = el.dataset.words ? el.dataset.words.split('|') : defaultWords;
   let index = 0;
   const intervalMs = 2200;
 

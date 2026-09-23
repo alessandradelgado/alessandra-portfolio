@@ -113,6 +113,32 @@ main, header, footer {
 
 @media (max-width: 720px) {
   .site-nav { display: none; }
+  .site-header { gap: 0.6rem; }
+  .lang-switcher { gap: 0; font-size: 0.75rem; }
+  .lang-link { padding: 0.2rem 0.3rem; }
+  .nav-cta { padding: 0.5rem 0.8rem; font-size: 0.85rem; }
+}
+
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.lang-link {
+  text-decoration: none;
+  color: var(--sage);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.lang-link:hover { color: var(--ink); }
+
+.lang-link.is-active {
+  color: var(--ink);
+  background: var(--line);
 }
 
 /* ---------- Hero ---------- */
