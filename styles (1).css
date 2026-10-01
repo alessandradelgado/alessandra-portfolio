@@ -762,7 +762,7 @@ main, header, footer {
 .design-gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .design-item {
@@ -770,7 +770,13 @@ main, header, footer {
   border-radius: 4px;
   overflow: hidden;
   border: 1px solid var(--line);
+  background: var(--paper-raised);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.design-item a {
+  display: block;
+  cursor: zoom-in;
 }
 
 .design-item:hover {
@@ -780,13 +786,11 @@ main, header, footer {
 
 .design-item img {
   display: block;
-  height: 320px;
+  height: 190px;
   width: auto;
   max-width: 100%;
 }
 
-@media (max-width: 720px) {
-  .design-item img {
-    height: 220px;
-  }
+@media (max-width: 560px) {
+  .design-item img { height: 150px; }
 }
