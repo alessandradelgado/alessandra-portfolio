@@ -744,3 +744,53 @@ main, header, footer {
   line-height: 1.55;
   color: rgba(27, 36, 64, 0.75);
 }
+
+/* ---------- Design Work gallery ---------- */
+.design-section {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.design-section:first-of-type { border-top: none; }
+
+.design-client-desc {
+  max-width: 62ch;
+  color: rgba(27, 36, 64, 0.75);
+  margin: 0.5rem 0 1.75rem;
+}
+
+.design-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.design-item {
+  margin: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--paper-raised);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.design-item a {
+  display: block;
+  cursor: zoom-in;
+}
+
+.design-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(27, 36, 64, 0.1);
+}
+
+.design-item img {
+  display: block;
+  height: 190px;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 560px) {
+  .design-item img { height: 150px; }
+}
