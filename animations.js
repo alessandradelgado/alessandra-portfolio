@@ -10,7 +10,7 @@
 
   // ---------- Scroll reveal ----------
   if ('IntersectionObserver' in window) {
-    var revealTargets = document.querySelectorAll('.work-card, .case-section, .tools-col');
+    var revealTargets = document.querySelectorAll('.work-card, .case-section, .tools-col, .design-section');
 
     var revealObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
