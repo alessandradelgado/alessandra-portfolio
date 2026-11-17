@@ -1191,3 +1191,26 @@ h1, h2, h3 { font-weight: 700; letter-spacing: -0.03em; }
 
 /* breathing room above the full-bleed footer on inner pages */
 main:not(#top) { padding-bottom: 3.5rem; }
+
+/* inline links inside case-study copy and captions */
+.case-section p a, .result-shot figcaption a {
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.case-section p a:hover, .result-shot figcaption a:hover { background: var(--accent-soft); }
+
+/* the case-next links already contain an arrow in their text */
+.case-next .work-link::after { content: none; }
+/* caption links must not inherit the image-frame styling */
+.result-shot figcaption a {
+  display: inline;
+  background: none;
+  border: 0;
+  box-shadow: none;
+  padding: 0;
+  transform: none;
+}
+.result-shot figcaption a:hover { transform: none; box-shadow: none; }
